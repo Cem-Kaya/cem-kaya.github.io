@@ -68,7 +68,11 @@
     </div>
   </header>
 
- <!-- PUBLICATIONS -->
+  
+
+
+
+  <!-- PUBLICATIONS -->
   <section id="publications" class="publications">
     <div class="container">
       <h2 class="main-font">My<span class="text-dark-blue main-font"> Publications</span></h2>
@@ -238,6 +242,16 @@
     </div>
   </section>
 
+  <!-- banner -->
+  <div id="consent-banner" style="display:none; position: fixed; bottom: 0; width: 100%; background: black; color: white; text-align: center; padding: 20px;">
+    <h2>🍪</h2> This website uses cookies for analytics. By continuing to use this website, you consent to our use of cookies.
+    <h2>  
+      <button onclick="giveConsent()">I Agree</button>
+    </h2>
+  </div>
+  
+
+  <!-- FOOTER -->
   <footer id="footer" class="footer">
     <div class="container">
       <div class="footer-flex">
@@ -251,6 +265,19 @@
     </div>
   </footer>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HVKQN80RQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2HVKQN80RQ', {
+      'anonymize_ip': true,
+      'cookie_expires': 0
+    });
+  </script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
@@ -259,5 +286,25 @@
   <script>
     AOS.init();
   </script>
+
+  <script>
+    // Check if the user has already given consent
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const consentGiven = localStorage.getItem('analyticsConsent');
+      if (!consentGiven) {
+        document.getElementById('consent-banner').style.display = 'block';
+      }
+    });
+
+    // Function to run when user clicks "I Agree"
+    function giveConsent() {
+      localStorage.setItem('analyticsConsent', 'true'); // Store consent
+      document.getElementById('consent-banner').style.display = 'none'; // Hide the banner
+    }
+  </script>
+  <!-- Iconify Icons -->
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+
 </body>
 </html>
