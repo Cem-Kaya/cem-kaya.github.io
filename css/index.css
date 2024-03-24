@@ -46,7 +46,7 @@ html {
   }
   
   .container {
-    max-width: 1200px;
+    max-width: 60% ;
     padding: 1.5rem 1.5rem;
     margin: auto;
     overflow: hidden;
@@ -122,7 +122,7 @@ html {
   
   .btn-blue:hover {
     transition: all 0.3s ease;
-    background: #0b63f3;
+    background: #0455d8;
     border: 2px solid #0b63f3;
   }
   
@@ -700,6 +700,8 @@ html {
     padding: 3rem 0;
   }
   
+
+
   .projects h1,  
   .projects p {
     color: #dcdcdc;
@@ -717,16 +719,26 @@ html {
   .projects .project-row {
     display: flex;
     margin-bottom: 3rem;
-  }
-  
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Optional: to align items vertically */
+  }  
+ 
   .projects .project-row .project-left {
     width: 50%;
     margin-right: 2rem;
-  }
+    margin-left: auto; /* Keep this if you need spacing from the left item */
+    /* Ensure it doesn't fill the entire flex container */
+    /* flex: 1 0 auto; This allows the item to have a flexible basis but not grow to fill space */
+}
   
   .projects .project-row .project-left img {
     width: 100%;
     border: 1px solid lightgray;
+  }
+  .projects .project-row .project-left iframe {
+    
+    height: 100%;;
+    border: 1px solid black;
   }
   
   .projects .project-row .project-right {
@@ -756,6 +768,7 @@ html {
     font-size: 1.5rem;
   }
   
+  
   .projects .project-row .project-right .project-links {
     margin-top: 1rem;
   }
@@ -784,7 +797,115 @@ html {
       width: 100%;
     }
   }
+
+  .container {
+    max-width: 100%; /* or a specific px value if you want a maximum limit */
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
   
+
+
+  
+  /**********************************************/ 
+  .publications .publications-row {
+    display: flex;
+    margin-bottom: 3rem;
+  }
+  
+ 
+  .publications .publications-row .publications-left img {
+    width: auto; /* Adjust this as needed, can also use 100% if you want the image to expand */
+    max-width: 750px;
+    display: block;
+    margin-right: 10%;
+    margin-left: auto;
+}
+
+ 
+
+  .publications .publications-row .publications-left {
+    width: 50%;
+    margin-right: 2rem;
+  }  
+  
+  .publications .publications-row .publications-left img {
+    width: 90%;
+    border: 1px solid lightgray;
+  }
+  
+  .publications .publications-row .publications-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .publications .publications-row .publications-right h3 {
+    font-size: 1.25rem;
+  }
+  
+  .publications .publications-row .publications-right .tech-stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-top: 1rem;
+  }
+  
+  .publications .publications-row .publications-right .tech-stack-list p {
+    margin-right: 1rem;
+  }
+  
+  .publications .publications-row .publications-right .tech-stack-list li {
+    margin-right: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .publications .publications-row .publications-right .publications-links {
+    margin-top: 1rem;
+  }
+  
+  .publications .publications-row #webscraper {
+    background-image: url("../img/top10songs.JPG");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-image 0.2s ease-in-out;
+  }
+  
+  .publications .publications-row #webscraper:hover {
+    background-image: url("../img/top10songs.gif");
+  }
+  
+  @media screen and (max-width: 860px) {
+    .publications .publications-row {
+      display: flex;
+      margin-bottom: 3rem;
+      flex-direction: column;
+    }
+    .publications .publications-row .publications-left {
+      width: 100%;
+    }
+    .publications .publications-row .publications-right {
+      width: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   @media screen and (max-width: 500px) {
     .project-left {
       min-height: 200px;
@@ -1212,6 +1333,7 @@ html {
   
 
   .publications {
+    display: flex;
     background: #ccc;;
     padding: 3rem 0;
   }
@@ -1239,7 +1361,17 @@ html {
   .publication-links {
     margin-top: 1rem;
   }
+  .project-media {
+    width: 100%; /* Adjust this as necessary */
+    height: auto; /* For images and videos, this will maintain aspect ratio */
+    margin-bottom: 15px; /* Space between media and text */
+  }
   
+  /* Additional responsive adjustments or specific styling can be added as needed */
+  
+
+
+
 
 
 
@@ -1267,3 +1399,13 @@ html {
   }
 
   /*# sourceMappingURL=main.css.map */
+
+
+
+
+  .project-left iframe {
+    display: block; /* Ensures the iframe is a block-level element */
+    margin-right: 10% ; /* Pushes the iframe to the right within its container */
+    margin-left: auto ; /* Pushes the iframe to the right within its container */
+    
+}
