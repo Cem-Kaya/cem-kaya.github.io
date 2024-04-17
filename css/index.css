@@ -572,10 +572,15 @@ html {
     margin-left: 1.5rem;
   }
   
+  .socials ul li.socials_extra_long:hover {
+    transform: translateX(225px);
+  }
+
   header .socials ul li:hover {
     transform: translateX(115px);
   }
-  
+
+
   header .scroll-btn-container {
     position: absolute;
     width: 100%;
