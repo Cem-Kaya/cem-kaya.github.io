@@ -1405,12 +1405,31 @@ html {
 
   /*# sourceMappingURL=main.css.map */
 
-
+ 
 
 
   .project-left iframe {
     display: block; /* Ensures the iframe is a block-level element */
     margin-right: 10% ; /* Pushes the iframe to the right within its container */
     margin-left: auto ; /* Pushes the iframe to the right within its container */
-    
+    min-height: 250px;
+    min-width: 500px; 
+    width:auto;
+  }
+
+  .projects .project-row .project-left img {
+    height: auto; /* Adjust this as needed, can also use 100% if you want the image to expand */
+    max-width: 750px ; /* Limit the image to not exceed the container width */
+    display: block; /* Ensures the image is a block element, centering might need block display */
+     
+
+    margin-right: 10%;
+    margin-left: auto;
+    border-color:  rgb(24, 26, 27) ;
+
 }
+
+
+/* ################################## */
+
+.
