@@ -1432,4 +1432,98 @@ html {
 
 /* ################################## */
 
-.
+@media screen and (max-width: 500px) {
+  /* General adjustments for smaller screens */
+  body, .container {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  .text-center {
+      text-align: center;
+  }
+
+  /* Stacking elements vertically instead of side by side */
+  .flex,
+  .projects .project-row,
+  .publications .publications-row,
+  .contact .card-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* Ensures that images and iframes take the full width and adjust height automatically */
+  img, iframe {
+      width: 100%;
+      height: auto;
+  }
+
+  /* Adjust text sizes for readability on small screens */
+  h1, h2, h3, h4, p {
+      font-size: smaller;
+  }
+
+  /* Center and justify content in cards and sections */
+  .card, .education-card, .skills-icons li {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+  }
+
+  /* Nav and header adjustments */
+  header nav .nav-container {
+      flex-direction: column;
+  }
+
+  header .hero, .header .hero h1, .header .hero p {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+  }
+
+  /* Adjustments for social icons and footer links to prevent clutter */
+  .socials ul, .footer .footer-flex .footer-icon-links {
+      justify-content: center;
+  }
+
+  .socials ul li, .footer .footer-flex .footer-icon-links a {
+      margin: 10px auto;
+  }
+  
+  /* Ensure that all buttons and links are easily clickable */
+  .btn, a {
+      min-width: 100%;  /* Ensures full width for easier tap targets */
+      padding: 12px 20px;  /* Larger padding for easier interaction */
+  }
+
+  /* Miscellaneous adjustments for specific components */
+  .btn-email, .publication-entry, .project-media {
+      width: 100%;  /* Ensures that custom components also fit the screen */
+      margin-top: 10px;
+      text-align: center;
+  }
+
+  .publication-entry p, .project-row .project-right {
+      text-align: justify; /* Ensures text is properly justified for easier reading */
+  }
+}
+/* ################################## */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
